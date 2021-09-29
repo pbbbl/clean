@@ -1,11 +1,11 @@
 {
-    "version": "1.1.21",
+    "version": "1.1.22",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "commit": "standard-version && git add .  && git-cz && git status",
+        "commit": "echo $npm_package_version && standard-version && git add .  && git-cz && git status",
         "release": "yarn commit && git push",
         "postrelease": "npm publish"
     },
@@ -65,7 +65,7 @@
     ],
     "config": {
         "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
+            "path": "git-cz"
         }
     },
     "publishConfig": {
