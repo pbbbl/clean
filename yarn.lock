@@ -406,10 +406,11 @@
     url-template "^2.0.8"
 
 "@pbbbl/clean@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@pbbbl/clean/1.0.2/42409b195d8f28b05367c1707ceb1fa3934fbca716c3717fa643b156ad5f8eb6#70d9090fbc5d0c3f0252e5f8c5ddcad87de14761"
-  integrity sha512-FCrNlVU/gcnN5IJdJpcYDnC1tDrSvmVNAyhTt8mECXgAqTjcF3pHo+nbFRwwYRV9BIQCW0jxHtgMBTmEwokWkg==
+  version "1.0.5"
+  resolved "https://npm.pkg.github.com/download/@pbbbl/clean/1.0.5/6bd2b2a837150908958b8213e042be8ee933b97e9b8cc1e1b61ac9dcb93c4044#4999880fedafa12331f620a1547c47cde7c15297"
+  integrity sha512-d0L/yOkCELGD3L1zZbrWissb4AqVWRbZmMRfzweAJoZQ2KZnGej593PkDYglKPntYOjTEDRcOZ/ZR4d3YlzCvw==
   dependencies:
+    "@pbbbl/clean" "^1.0.2"
     lodash.isempty "^4.4.0"
     lodash.isfunction "^3.0.9"
     lodash.isplainobject "^4.0.6"

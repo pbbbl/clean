@@ -2,6 +2,10 @@
     "name": "@pbbbl/clean",
     "version": "1.0.6",
     "private": false,
+    "public": true,
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
     "description": "Fork of clean-deep by nonofgs with option to remove functions",
     "main": "index.js",
     "scripts": {
@@ -11,10 +15,7 @@
         "name": "Tyler Grow",
         "email": "tyler@pbbbl.com"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pbbbl/clean.git"
-    },
+    "repository": "git://github.com/pbbbl/clean.git",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/pbbbl/clean/issues"
@@ -46,17 +47,18 @@
         "firebase"
     ],
     "dependencies": {
-        "@pbbbl/clean": "^1.0.2",
         "lodash.isempty": "^4.4.0",
         "lodash.isfunction": "^3.0.9",
         "lodash.isplainobject": "^4.0.6",
         "lodash.transform": "^4.6.0"
     },
     "devDependencies": {
+        "@commitlint/cli": "^13.2.0",
+        "@commitlint/config-conventional": "^13.2.0",
         "@uphold/github-changelog-generator": "^0.8.1",
         "eslint": "^6.2.2",
         "eslint-config-uphold": "^1.0.0",
-        "husky": "^3.0.4",
+        "husky": "^3.1.0",
         "jest": "^24.9.0",
         "lint-staged": "^9.2.5"
     },
