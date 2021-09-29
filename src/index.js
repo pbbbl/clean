@@ -12,7 +12,7 @@ const transform = require("lodash.transform");
 
 module.exports = function clean(
     object,
-    { cleanKeys = [], cleanValues = [], emptyArrays = true, emptyObjects = true, emptyStrings = true, fn = true, NaNValues = false, nullValues = true, undefinedValues = true } = {},
+    { cleanKeys = [], cleanValues = [], emptyArrays = true, emptyObjects = true, emptyStrings = true, functionsAndMethods = true, NaNValues = false, nullValues = true, undefinedValues = true } = {},
 ) {
     return transform(object, (result, value, key) => {
         // Exclude specific keys.
@@ -28,7 +28,7 @@ module.exports = function clean(
                 emptyArrays,
                 emptyObjects,
                 emptyStrings,
-                fn,
+                functionsAndMethods,
                 NaNValues,
                 nullValues,
                 undefinedValues,
@@ -66,7 +66,7 @@ module.exports = function clean(
         }
 
         // Exclude functions.
-        if (fn !== false && typeof value == "function") {
+        if (functionsAndMethods !== false && typeof value == "function") {
             return;
         }
 
