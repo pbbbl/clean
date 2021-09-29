@@ -62,6 +62,16 @@
         "jest": "^24.9.0",
         "lint-staged": "^9.2.5"
     },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
     "engines": {
         "node": ">=4"
     }
