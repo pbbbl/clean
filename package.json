@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "commit": "git add . && git-cz",
-        "release": "standard-version && git push"
+        "release": "yarn commit && standard-version && git push"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
