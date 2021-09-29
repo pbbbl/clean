@@ -1,6 +1,6 @@
 {
     "name": "@pbbbl/clean",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "private": false,
     "description": "Fork of clean-deep by nonofgs with option to remove functions",
     "main": "index.js",
