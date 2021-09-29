@@ -1,12 +1,12 @@
 {
-    "version": "1.1.8",
+    "version": "1.1.9",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "commit": "git-cz",
-        "version": "standard-version",
+        "prerelease": "standard-version",
         "release": "standard-version && yarn commit && yarn push && npm publish",
         "push": "git push"
     },
