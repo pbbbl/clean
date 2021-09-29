@@ -7,12 +7,12 @@ const isPlainObject = require("lodash.isplainobject");
 const transform = require("lodash.transform");
 
 /**
- * Export `cleanDeep` function.
+ * Export `clean` function.
  */
 
 module.exports = function clean(
     object,
-    { cleanKeys = [], cleanValues = [], emptyArrays = true, emptyObjects = true, emptyStrings = true, functionsAndMethods = true, NaNValues = false, nullValues = true, undefinedValues = true } = {},
+    { cleanKeys = [], cleanValues = [], emptyArrays = true, emptyObjects = true, emptyStrings = true, methods = true, NaNValues = false, nullValues = true, undefinedValues = true } = {},
 ) {
     return transform(object, (result, value, key) => {
         // Exclude specific keys.
@@ -22,13 +22,13 @@ module.exports = function clean(
 
         // Recurse into arrays and objects.
         if (Array.isArray(value) || isPlainObject(value)) {
-            value = cleanDeep(value, {
+            value = clean(value, {
                 cleanKeys,
                 cleanValues,
                 emptyArrays,
                 emptyObjects,
                 emptyStrings,
-                functionsAndMethods,
+                methods,
                 NaNValues,
                 nullValues,
                 undefinedValues,
@@ -66,7 +66,7 @@ module.exports = function clean(
         }
 
         // Exclude functions.
-        if (functionsAndMethods !== false && typeof value == "function") {
+        if (methods !== false && typeof value == "function") {
             return;
         }
 

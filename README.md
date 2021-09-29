@@ -1,6 +1,6 @@
 # @pbbbl/clean
 
-> Forked [clean-deep](https://github.com/nunofgs/clean-deep/tree/v3.4.0p) with new `functionsAndMethods` option for removing functions/methods. Traverses arrays and objects.
+> Forked [clean-deep](https://github.com/nunofgs/clean-deep/tree/v3.4.0p) with new `methods` option for removing functions/methods. Traverses arrays and objects.
 
 Removes _methods (functions)_ empty _objects_, _arrays_, empty _strings_, _NaN_, _null_, and _undefined_ values from objects. Does not alter the original object.
 
@@ -21,24 +21,24 @@ npm i -S clean-deep-pbbbl
 1. `object` _(Object)_: The source object.
 2. `[options]` _(Object)_: An optional object with the following options:
 
-| Option                | Default value | Description                                                                                                           |
-| --------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `cleanKeys`           | []            | Remove specific keys, ie: `['foo', 'bar', ' ']`                                                                       |
-| `cleanValues`         | []            | Remove specific values, ie: `['foo', 'bar', ' ']`                                                                     |
-| `emptyArrays`         | true          | Remove empty arrays, ie: `[]`                                                                                         |
-| `emptyObjects`        | true          | Remove empty objects, ie: `{}`                                                                                        |
-| `emptyStrings`        | true          | Remove empty strings, ie: `''`                                                                                        |
-| `functionsAndMethods` | true          | Remove functions, ie: `()=>{}, function(){}` - ony in [`pbbbl-clean-deep`](https://github.com/pbbbl/pbbbl-clean-deep) |
-| `NaNValues`           | false         | Remove NaN values, ie: `NaN`                                                                                          |
-| `nullValues`          | true          | Remove null values, ie: `null`                                                                                        |
-| `undefinedValues`     | true          | Remove undefined values, ie: `undefined`                                                                              |
+| Option            | Default value | Description                                                                                                           |
+| ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `cleanKeys`       | []            | Remove specific keys, ie: `['foo', 'bar', ' ']`                                                                       |
+| `cleanValues`     | []            | Remove specific values, ie: `['foo', 'bar', ' ']`                                                                     |
+| `emptyArrays`     | true          | Remove empty arrays, ie: `[]`                                                                                         |
+| `emptyObjects`    | true          | Remove empty objects, ie: `{}`                                                                                        |
+| `emptyStrings`    | true          | Remove empty strings, ie: `''`                                                                                        |
+| `methods`         | true          | Remove functions, ie: `()=>{}, function(){}` - ony in [`pbbbl-clean-deep`](https://github.com/pbbbl/pbbbl-clean-deep) |
+| `NaNValues`       | false         | Remove NaN values, ie: `NaN`                                                                                          |
+| `nullValues`      | true          | Remove null values, ie: `null`                                                                                        |
+| `undefinedValues` | true          | Remove undefined values, ie: `undefined`                                                                              |
 
 _(Object)_: Returns the cleansed object.
 
 ### Example
 
 ```javascript
-const cleanDeep = require("clean-deep");
+const clean = require("clean-deep");
 const object = {
     ant: "bug",
     bear: "",
@@ -61,7 +61,7 @@ const object = {
     },
 };
 
-const output = cleanDeep(object);
+const output = clean(object);
 /* output ==>
 {
     ant: "bug",

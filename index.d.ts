@@ -1,6 +1,6 @@
-declare function cleanDeep<T>(object: T, options?: CleanOptions): Partial<T>;
+declare function clean<T>(object: T, options?: CleanOptions): Partial<T>;
 
-export default cleanDeep;
+export default clean;
 
 export type CleanOptions = {
     cleanKeys?: string[];
@@ -9,7 +9,7 @@ export type CleanOptions = {
     emptyObjects?: boolean;
     emptyStrings?: boolean;
     NaNValues?: boolean;
-    fn: boolean,
+    methods: boolean,
     nullValues?: boolean;
     undefinedValues?: boolean;
 };

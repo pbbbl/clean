@@ -1,7 +1,7 @@
 _private
 **/*.config.codekit3
 **/*.runtimeconfig.json
-**/*.yarn.lock*
+# **/*.yarn.lock*
 **/*.txt
 **/*.env
 **/*.env*
