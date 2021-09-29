@@ -1,11 +1,18 @@
 {
+    "name": "@pbbbl/clean",
+    "version": "1.0.6",
+    "private": false,
+    "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "version": "npm version ",
-        "commit": "git add . && cz && git push"
+        "commit": "git-cz",
+        "prerelease": "git add . && git commit -m \"Before release\" && git push",
+        "release": "standard-version && yarn commit && git push origin master",
+        "release:major": "standard-version -- --release-as major && yarn commit && git push origin master"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
+        "git-cz": "^4.7.6",
         "lodash.isempty": "^4.4.0",
         "lodash.isfunction": "^3.0.9",
         "lodash.isplainobject": "^4.0.6",
@@ -13,14 +20,8 @@
     },
     "devDependencies": {
         "cz-conventional-changelog": "3.3.0",
-        "husky": "^7.0.2"
-    },
-    "name": "@pbbbl/clean",
-    "version": "1.0.6",
-    "private": false,
-    "public": true,
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
+        "husky": "^7.0.2",
+        "standard-version": "^9.3.1"
     },
     "description": "Fork of clean-deep by nonofgs with option to remove functions",
     "main": "index.js",
@@ -66,5 +67,8 @@
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
         }
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
     }
 }
