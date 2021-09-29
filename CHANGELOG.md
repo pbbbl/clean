@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/pbbbl/clean/compare/v1.0.7...v1.1.1) (2021-09-29)
+
+
+### Others
+
+* **release:** 1.0.7 ([2e9e210](https://github.com/pbbbl/clean/commit/2e9e21051bd742172c4c7c4e450c8aa1cdc201ed))
+
+
+### CI
+
+* 🎡 updated ci - with commit in release ([2e9e171](https://github.com/pbbbl/clean/commit/2e9e1716ff48e486034dd9398552b53d53c73c86))
+* 🎡 updated scripts ([ded8051](https://github.com/pbbbl/clean/commit/ded8051696b925cb910aeddd3161cb88147e7115))
+* 🎡 versioning ([ff8f8fb](https://github.com/pbbbl/clean/commit/ff8f8fbf014aa58026e45585dea86c8c6c1b4c8d))
+
 ### 1.0.7 (2021-09-29)
 
 
