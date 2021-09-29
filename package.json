@@ -1,5 +1,5 @@
 {
-    "version": "1.1.11",
+    "version": "1.1.12",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
@@ -19,12 +19,13 @@
         "lodash.transform": "^4.6.0"
     },
     "devDependencies": {
+        "clean-deep": "^3.4.0",
         "cz-conventional-changelog": "3.3.0",
         "husky": "^7.0.2",
         "standard-version": "^9.3.1"
     },
     "description": "Fork of clean-deep by nonofgs with option to remove functions",
-    "main": "index.js",
+    "main": "./src/index.js",
     "engines": {
         "node": ">=4"
     },
