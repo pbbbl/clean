@@ -1,12 +1,13 @@
 {
-    "version": "1.1.20",
+    "version": "1.1.21",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "commit": "standard-version && git add .  && git-cz && git status",
-        "release": "yarn commit && git push origin master && npm publish"
+        "release": "yarn commit && git push",
+        "postrelease": "npm publish"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
