@@ -1,4 +1,4 @@
-# clean-deep-pbbbl (clean-deep)
+# @pbbbl/clean
 
 > Forked [clean-deep](https://github.com/nunofgs/clean-deep/tree/v3.4.0p) with new `fn` option for removing functions/methods. Traverses arrays and objects.
 
