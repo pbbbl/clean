@@ -1,0 +1,64 @@
+{
+    "name": "@pbbbl/clean",
+    "version": "1.0.0",
+    "description": "Fork of nonofgs/clean-deep with option to remove functions. Remove falsy, empty or nullable values from objects - nunofgs/clean-deep.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": {
+        "name": "Tyler Grow",
+        "email": "tyler@pbbbl.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pbbbl/clean"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/pbbbl/clean/issues"
+    },
+    "homepage": "https://github.com/pbbbl/clean#readme",
+    "keywords": [
+        "clean",
+        "clean-deep",
+        "pbbbl-clean-deep",
+        "pbbbl-clean",
+        "@pbbbl",
+        "clean-objects",
+        "clean-objects",
+        "firebase-clean",
+        "firebase-object",
+        "firebase-objects",
+        "firestore-object",
+        "firestore-clean",
+        "firestore-objects",
+        "pbbbl",
+        "deep",
+        "functions",
+        "methods",
+        "json",
+        "object",
+        "objects",
+        "js",
+        "firestore",
+        "firebase"
+    ],
+    "dependencies": {
+        "lodash.isempty": "^4.4.0",
+        "lodash.isfunction": "^3.0.9",
+        "lodash.isplainobject": "^4.0.6",
+        "lodash.transform": "^4.6.0"
+    },
+    "devDependencies": {
+        "@uphold/github-changelog-generator": "^0.8.1",
+        "eslint-config-uphold": "^1.0.0",
+        "eslint": "^6.2.2",
+        "husky": "^3.0.4",
+        "jest": "^24.9.0",
+        "lint-staged": "^9.2.5"
+    },
+    "engines": {
+        "node": ">=4"
+    }
+}
