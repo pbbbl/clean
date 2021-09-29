@@ -1,6 +1,7 @@
 {
     "name": "@pbbbl/clean",
-    "version": "1.0.0",
+    "version": "1.0.3",
+    "private": false,
     "description": "Fork of nonofgs/clean-deep with option to remove functions. Remove falsy, empty or nullable values from objects - nunofgs/clean-deep.",
     "main": "index.js",
     "scripts": {
@@ -45,6 +46,7 @@
         "firebase"
     ],
     "dependencies": {
+        "@pbbbl/clean": "^1.0.2",
         "lodash.isempty": "^4.4.0",
         "lodash.isfunction": "^3.0.9",
         "lodash.isplainobject": "^4.0.6",
@@ -52,8 +54,8 @@
     },
     "devDependencies": {
         "@uphold/github-changelog-generator": "^0.8.1",
-        "eslint-config-uphold": "^1.0.0",
         "eslint": "^6.2.2",
+        "eslint-config-uphold": "^1.0.0",
         "husky": "^3.0.4",
         "jest": "^24.9.0",
         "lint-staged": "^9.2.5"

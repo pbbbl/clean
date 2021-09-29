@@ -405,6 +405,16 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
+"@pbbbl/clean@^1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@pbbbl/clean/1.0.2/42409b195d8f28b05367c1707ceb1fa3934fbca716c3717fa643b156ad5f8eb6#70d9090fbc5d0c3f0252e5f8c5ddcad87de14761"
+  integrity sha512-FCrNlVU/gcnN5IJdJpcYDnC1tDrSvmVNAyhTt8mECXgAqTjcF3pHo+nbFRwwYRV9BIQCW0jxHtgMBTmEwokWkg==
+  dependencies:
+    lodash.isempty "^4.4.0"
+    lodash.isfunction "^3.0.9"
+    lodash.isplainobject "^4.0.6"
+    lodash.transform "^4.6.0"
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.1.tgz#a21117b19ee9be70c379ec1877537ef2e1c63301"
