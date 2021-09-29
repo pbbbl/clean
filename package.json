@@ -2,7 +2,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "version": "npm version ",
-        "commit": "git add . & cz"
+        "commit": "git add . && cz"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
