@@ -12,7 +12,7 @@ const transform = require("lodash.transform");
 
 module.exports = function clean(
     object,
-    { cleanKeys = [], cleanValues = [], emptyArrays = true, emptyObjects = true, emptyStrings = true, methods = true, NaNValues = false, nullValues = true, undefinedValues = true } = {},
+    { cleanKeys = [], cleanValues = [], emptyArrays = true, emptyObjects = true, emptyStrings = true, functions = true, NaNValues = false, nullValues = true, undefinedValues = true } = {},
 ) {
     return transform(object, (result, value, key) => {
         // Exclude specific keys.
@@ -22,17 +22,7 @@ module.exports = function clean(
 
         // Recurse into arrays and objects.
         if (Array.isArray(value) || isPlainObject(value)) {
-            value = clean(value, {
-                cleanKeys,
-                cleanValues,
-                emptyArrays,
-                emptyObjects,
-                emptyStrings,
-                methods,
-                NaNValues,
-                nullValues,
-                undefinedValues,
-            });
+            value = cleanDeep(value, { NaNValues, cleanKeys, cleanValues, emptyArrays, emptyObjects, emptyStrings, nullValues, undefinedValues });
         }
 
         // Exclude specific values.
@@ -55,6 +45,11 @@ module.exports = function clean(
             return;
         }
 
+        // Exclude empty strings.
+        if (functions && typeof value == "function") {
+            return;
+        }
+
         // Exclude NaN values.
         if (NaNValues && Number.isNaN(value)) {
             return;
@@ -65,13 +60,8 @@ module.exports = function clean(
             return;
         }
 
-        // Exclude functions.
-        if (methods !== false && typeof value == "function") {
-            return;
-        }
-
         // Exclude undefined values.
-        if (undefinedValues && value === undefined) {
+        if ((undefinedValues && value === undefined) || (typeof value === "undefined" && value !== null)) {
             return;
         }
 
@@ -83,3 +73,68 @@ module.exports = function clean(
         result[key] = value;
     });
 };
+// Exclude specific keys.
+// if (cleanKeys.includes(key)) {
+//     return;
+// }
+
+// // Recurse into arrays and objects.
+// if (Array.isArray(value) || isPlainObject(value)) {
+//     value = clean(value, {
+//         cleanKeys,
+//         cleanValues,
+//         emptyArrays,
+//         emptyObjects,
+//         emptyStrings,
+//         functions,
+//         NaNValues,
+//         nullValues,
+//         undefinedValues,
+//     });
+// }
+
+// // Exclude specific values.
+// if (cleanValues && .includes(value)) {
+//     console.log('cleaning specific values',cleanValues)
+//     return;
+// }
+
+// // Exclude empty objects.
+// if (emptyObjects && isPlainObject(value) && isEmpty(value)) {
+//     return;
+// }
+
+// // Exclude empty arrays.
+// if (emptyArrays && Array.isArray(value) && !value.length) {
+//     return;
+// }
+
+// // Exclude empty strings.
+// if (emptyStrings && value === "") {
+//     return;
+// }
+
+// // Exclude NaN values.
+// if (NaNValues && Number.isNaN(value)) {
+//     return;
+// }
+
+// // Exclude null values.
+// if (nullValues && value === null) {
+//     return;
+// }
+
+// // Exclude functions.
+// if (functions !== false && typeof value == "function") {
+//     return;
+// }
+
+// // Exclude undefined values.
+// if (undefinedValues && value === undefined) {
+//     return;
+// }
+
+// // Append when recursing arrays.
+// if (Array.isArray(result)) {
+//     return result.push(value);
+// }
