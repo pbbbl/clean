@@ -1,14 +1,12 @@
 {
-    "version": "1.2.5",
+    "version": "1.2.6",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "precommit": "standard-version && git add . && git-cz",
-        "commit": "yarn set:version && yarn get:version",
-        "set:version": "VERSION=$(git describe --tags --abbrev=0)",
-        "get:version": "echo 'helloworld'"
+        "precommit": "standard-version && git add .",
+        "commit": "git-cz"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
