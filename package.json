@@ -1,5 +1,5 @@
 {
-    "version": "2.0.8",
+    "version": "2.0.9",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
@@ -11,6 +11,8 @@
         "postrelease": "git push --follow-tags && npm publish"
     },
     "dependencies": {
+        "is": "^3.3.0",
+        "jsonfile": "^6.1.0",
         "lodash.isempty": "^4.4.0",
         "lodash.isfunction": "^3.0.9",
         "lodash.isplainobject": "^4.0.6",
@@ -19,10 +21,8 @@
     "devDependencies": {
         "commitizen": "^4.2.4",
         "current-git-branch": "^1.1.0",
-        "git-cz": "^4.7.6",
-        "clean-deep": "^3.4.0",
         "cz-conventional-changelog": "3.3.0",
-        "husky": "^7.0.2",
+        "git-cz": "^4.7.6",
         "standard-version": "^9.3.1"
     },
     "description": "Fork of clean-deep by nonofgs with option to remove functions",
