@@ -1,11 +1,12 @@
 {
-    "version": "1.1.22",
+    "version": "1.1.23",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "commit": "echo $npm_package_version && standard-version && git add .  && git-cz && git status",
+        "strings": "echo version: $npm_package_version",
+        "commit": "yarn strings && standard-version && git add .  && git-cz && git status  && git push -u origin ${branchName}",
         "release": "yarn commit && git push",
         "postrelease": "npm publish"
     },
@@ -25,6 +26,14 @@
     },
     "description": "Fork of clean-deep by nonofgs with option to remove functions",
     "main": "./src/index.js",
+    "config": {
+        "commitizen": {
+            "path": "git-cz"
+        }
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
     "engines": {
         "node": ">=4"
     },
@@ -62,13 +71,5 @@
         "js",
         "firestore",
         "firebase"
-    ],
-    "config": {
-        "commitizen": {
-            "path": "git-cz"
-        }
-    },
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com"
-    }
+    ]
 }

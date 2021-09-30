@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.23](https://github.com/pbbbl/clean/compare/v1.1.22...v1.1.23) (2021-09-30)
+
+
+### CI
+
+* 🎡 Testing ([6a9ed58](https://github.com/pbbbl/clean/commit/6a9ed5860ede281d266d81cbe265208e42ce2990))
+
 ### [1.1.22](https://github.com/pbbbl/clean/compare/v1.1.21...v1.1.22) (2021-09-29)
 
 ### [1.1.21](https://github.com/pbbbl/clean/compare/v1.1.20...v1.1.21) (2021-09-29)
