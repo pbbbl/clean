@@ -48,7 +48,7 @@ function clean(object, options) {
     };
     let { cleanKeys, cleanValues, emptyArrays, emptyObjects, emptyStrings, fns, NaNValues, nullValues, undefinedValues } = options;
 
-    console.log({ configId: options.configId, config });
+    // console.log({ configId: options.configId, config });
 
     return transform(object, (result, value, key) => {
         // Exclude specific keys.
