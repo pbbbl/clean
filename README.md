@@ -1,8 +1,8 @@
 # @pbbbl/clean
 
-> Forked [clean-deep](https://github.com/nunofgs/clean-deep/tree/v3.4.0p) with new `functions` option for removing functions/functions. Traverses arrays and objects.
+> Forked [clean-deep](https://github.com/nunofgs/clean-deep/tree/v3.4.0p) with new `fns` option for removing methods/functions. Traverses arrays and objects.
 
-Removes _functions (functions)_ empty _objects_, _arrays_, empty _strings_, _NaN_, _null_, and _undefined_ values from objects. Does not alter the original object.
+Removes _functions_, empty objects*, \_arrays*, empty _strings_, _NaN_, _null_, and _undefined_ values from objects. Does not alter the original object.
 
 ## Installation
 
@@ -28,7 +28,7 @@ npm i -S clean-deep-pbbbl
 | `emptyArrays`     | true          | Remove empty arrays, ie: `[]`                                                                                         |
 | `emptyObjects`    | true          | Remove empty objects, ie: `{}`                                                                                        |
 | `emptyStrings`    | true          | Remove empty strings, ie: `''`                                                                                        |
-| `functions`       | true          | Remove functions, ie: `()=>{}, function(){}` - ony in [`pbbbl-clean-deep`](https://github.com/pbbbl/pbbbl-clean-deep) |
+| `fns`             | true          | Remove functions, ie: `()=>{}, function(){}` - ony in [`pbbbl-clean-deep`](https://github.com/pbbbl/pbbbl-clean-deep) |
 | `NaNValues`       | false         | Remove NaN values, ie: `NaN`                                                                                          |
 | `nullValues`      | true          | Remove null values, ie: `null`                                                                                        |
 | `undefinedValues` | true          | Remove undefined values, ie: `undefined`                                                                              |
