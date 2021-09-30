@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.11](https://github.com/pbbbl/clean/compare/v2.0.10...v2.0.11) (2021-09-30)
+
+
+### Bug Fixes
+
+* 🐛 missing export on module ([04a06d1](https://github.com/pbbbl/clean/commit/04a06d1b68cff1e3c4b6b8cbfb01ce6c892535ce))
+
 ### [2.0.10](https://github.com/pbbbl/clean/compare/v2.0.9...v2.0.10) (2021-09-30)
 
 
