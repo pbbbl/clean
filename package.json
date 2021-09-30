@@ -1,17 +1,21 @@
 {
-    "version": "1.1.23",
+    "version": "1.1.24",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "strings": "echo version: $npm_package_version",
-        "commit": "yarn strings && standard-version && git add .  && git-cz && git status  && git push -u origin ${branchName}",
+        "commit:b": "npm run setup && echo $branch $version",
+        "commit": "npm run setup && standard-version && git add .  && git-cz && git status  && git push -u origin branch",
         "release": "yarn commit && git push",
-        "postrelease": "npm publish"
+        "postrelease": "npm publish",
+        "setup:branch": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)",
+        "setup:version": "standard-version",
+        "setup": "npm run setup:branch && npm run setup:version"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
+        "current-git-branch": "^1.1.0",
         "git-cz": "^4.7.6",
         "lodash.isempty": "^4.4.0",
         "lodash.isfunction": "^3.0.9",
