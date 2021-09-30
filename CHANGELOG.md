@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/pbbbl/clean/compare/v1.2.18...v2.0.0) (2021-09-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 false
+
+### CI
+
+* 🎡 Working on scripts ([7aaf9a6](https://github.com/pbbbl/clean/commit/7aaf9a6f546dc20fadeeb8990f4ff284a0c85fa2))
+
 ### [1.2.18](https://github.com/pbbbl/clean/compare/v1.2.17...v1.2.18) (2021-09-30)
 
 ### [1.2.17](https://github.com/pbbbl/clean/compare/v1.2.16...v1.2.17) (2021-09-30)
