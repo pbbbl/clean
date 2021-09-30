@@ -1,11 +1,11 @@
 {
-    "version": "1.2.6",
+    "version": "1.2.7",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "precommit": "standard-version && git add .",
+        "precommit": "standard-version && git status && git add . && git status",
         "commit": "git-cz"
     },
     "dependencies": {
