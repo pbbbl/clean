@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.13](https://github.com/pbbbl/clean/compare/v2.0.12...v2.0.13) (2021-09-30)
+
+
+### Tests
+
+* 💍 preconfigured options ([de7b6c7](https://github.com/pbbbl/clean/commit/de7b6c7e9275e7f68a283e5fabd9fcd5bea7f025))
+
 ### [2.0.12](https://github.com/pbbbl/clean/compare/v2.0.11...v2.0.12) (2021-09-30)
 
 ### [2.0.11](https://github.com/pbbbl/clean/compare/v2.0.10...v2.0.11) (2021-09-30)
