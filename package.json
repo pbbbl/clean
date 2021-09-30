@@ -9,15 +9,15 @@
         "commit": "git-cz"
     },
     "dependencies": {
-        "commitizen": "^4.2.4",
-        "current-git-branch": "^1.1.0",
-        "git-cz": "^4.7.6",
         "lodash.isempty": "^4.4.0",
         "lodash.isfunction": "^3.0.9",
         "lodash.isplainobject": "^4.0.6",
         "lodash.transform": "^4.6.0"
     },
     "devDependencies": {
+        "commitizen": "^4.2.4",
+        "current-git-branch": "^1.1.0",
+        "git-cz": "^4.7.6",
         "clean-deep": "^3.4.0",
         "cz-conventional-changelog": "3.3.0",
         "husky": "^7.0.2",
