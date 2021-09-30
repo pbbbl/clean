@@ -50,16 +50,27 @@ const object = {
         return true
     },
     horse: function(){
-        return true,
+        return true
     },
     iguana: {
         ant: "boz",
         bear: "",
-        cat: ["cheeta","lion","",null],
+        cat: ["cheetah","lion","",null],
         dog: true,
         eel: false
     },
+
+    set edit(key,value){
+        this[key] = value;
+    }
+    get secondIguana(){
+        return {
+            name: "jerry",
+            toes: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+        }
+    }
 };
+object.edit.cat = ["house-cat"];
 
 const output = clean(object);
 /* output ==>
@@ -67,7 +78,7 @@ const output = clean(object);
     ant: "bug",
     iguana: {
         ant: "boz",
-        cat: ["cheeta","lion"],
+        cat: ["cheetah","lion"],
         dog: true,
         eel: false
     },
