@@ -23,10 +23,8 @@ const defaultOptions = {
     undefinedValues: true,
 };
 const configs = {
-    _default: { ...defaultOptions },
     json: {
-        cleanKeys: [],
-        cleanValues: [],
+        ...defaultOptions,
         emptyArrays: false,
         emptyObjects: false,
         emptyStrings: false,
@@ -34,21 +32,24 @@ const configs = {
         NaNValues: true,
         nullValues: false,
         undefinedValues: true,
-        configId: "json",
     },
 };
-function clean(object, options) {
-    options = options ? options : { ...defaultOptions, configId: "_default" };
-    const configId = options.configId;
-    const config = is.undefined(configs[configId]) ? configs._default : configs[configId];
-    options = {
-        ...defaultOptions,
-        ...config,
-        ...options,
-    };
+function clean(object, options, configOptions) {
+    if (is.string(options) && !is.undefined(configs[options])) {
+        configOptions = configOptions || {};
+        options = {
+            ...defaultOptions,
+            ...configs[options],
+            ...configOptions,
+        };
+    }
+    options = options ? options : { ...defaultOptions };
+    for (var key in defaultOptions) {
+        if (is.undefined(options[key])) {
+            options[key] = defaultOptions[key];
+        }
+    }
     let { cleanKeys, cleanValues, emptyArrays, emptyObjects, emptyStrings, fns, NaNValues, nullValues, undefinedValues } = options;
-
-    console.log({ configId: options.configId, config });
 
     return transform(object, (result, value, key) => {
         // Exclude specific keys.
@@ -59,7 +60,7 @@ function clean(object, options) {
 
         // Recurse into arrays and objects.
         if (Array.isArray(value) || isPlainObject(value)) {
-            value = clean(value, options);
+            value = clean(value, options, false);
         }
 
         // Exclude specific values.
