@@ -1,12 +1,12 @@
 {
-    "version": "1.2.16",
+    "version": "1.2.17",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "precommit": "echo \"precommit------\n\n\" && git status && standard-version",
-        "commit": "echo \n\n\n\n\"commit------\n\n\" && git status && git-cz && git status"
+        "commit": "echo \"\n\n\n\n\ncommit------\n\n\" && git status && git-cz && git status"
     },
     "dependencies": {
         "commitizen": "^4.2.4",
