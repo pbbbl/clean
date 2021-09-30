@@ -22,7 +22,7 @@ module.exports = function clean(
 
         // Recurse into arrays and objects.
         if (Array.isArray(value) || isPlainObject(value)) {
-            value = cleanDeep(value, { NaNValues, cleanKeys, cleanValues, emptyArrays, emptyObjects, emptyStrings, nullValues, undefinedValues });
+            value = clean(value, { NaNValues, cleanKeys, cleanValues, emptyArrays, emptyObjects, emptyStrings, nullValues, undefinedValues });
         }
 
         // Exclude specific values.
