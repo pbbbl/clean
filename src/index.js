@@ -102,3 +102,4 @@ function isEmptyString(value) {
     const str = is.string(value) ? `${value}` : false;
     return str ? is.empty(str) || is.empty(str.replace(/\s/g, "")) : false;
 }
+module.exports = clean;
