@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0",
+    "version": "2.0.1",
     "name": "@pbbbl/clean",
     "private": false,
     "public": true,
@@ -8,7 +8,6 @@
         "precommit": "git add .",
         "commit": "git-cz",
         "release": "standard-version && yarn commit",
-        "release:major": "standard-version -- --release-as major",
         "postrelease": "git push --follow-tags && npm publish"
     },
     "dependencies": {
